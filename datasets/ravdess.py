@@ -13,7 +13,7 @@ import os
 
 
 def video_loader(video_dir_path):
-    video = np.load(os.path.join("ravdess_preprocessing", video_dir_path))    
+    video = np.load(video_dir_path)    
     video_data = []
     for i in range(np.shape(video)[0]):
         video_data.append(Image.fromarray(video[i,:,:,:]))    
@@ -23,7 +23,7 @@ def get_default_video_loader():
     return functools.partial(video_loader)
 
 def load_audio(audiofile, sr):
-    audios = librosa.core.load(audiofile, sr)
+    audios = librosa.core.load(path=audiofile, sr=sr)
     y = audios[0]
     return y, sr
 
