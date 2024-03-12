@@ -137,13 +137,12 @@ if __name__ == '__main__':
                 is_best = prec1 > best_prec1
                 best_prec1 = max(prec1, best_prec1)
                 state = {
-                'epoch': i,
-                'arch': opt.arch,
-                'state_dict': model.state_dict(),
-                'optimizer': optimizer.state_dict(),
-                'best_prec1': best_prec1
-                }
-               
+                    'epoch': i,
+                    'arch': opt.arch,
+                    'state_dict': model.state_dict(),
+                    'optimizer': optimizer.state_dict(),
+                    'best_prec1': best_prec1
+                }      
                 save_checkpoint(state, is_best, opt, fold)
 
                

@@ -9,10 +9,11 @@ from PIL import Image
 import functools
 import numpy as np
 import librosa
+import os
 
 
 def video_loader(video_dir_path):
-    video = np.load(video_dir_path)    
+    video = np.load(os.path.join("ravdess_preprocessing", video_dir_path))    
     video_data = []
     for i in range(np.shape(video)[0]):
         video_data.append(Image.fromarray(video[i,:,:,:]))    
@@ -36,7 +37,7 @@ def make_dataset(subset, annotation_path):
         
     dataset = []
     for line in annots:
-        filename, audiofilename, label, trainvaltest = line.split(';')        
+        filename, audiofilename, label, trainvaltest = line.split(';')
         if trainvaltest.rstrip() != subset:
             continue
         

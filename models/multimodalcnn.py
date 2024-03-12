@@ -11,7 +11,7 @@ from models.transformer_timm import AttentionBlock, Attention
 
 def conv1d_block(in_channels, out_channels, kernel_size=3, stride=1, padding='same'):
     return nn.Sequential(nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size,stride=stride, padding=padding),nn.BatchNorm1d(out_channels),
-                                   nn.ReLU(inplace=True)) 
+                                   nn.ReLU(inplace=True))
 
 class EfficientFaceTemporal(nn.Module):
 

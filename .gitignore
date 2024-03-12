@@ -1,0 +1,6 @@
+./ravdess
+./ravdess_preprocessing/ravdess
+./ravdess_preprocessing/processed.txt
+./ravdess_preprocessing/anootation.txt
+*ravdess/
+*baseline-venv
