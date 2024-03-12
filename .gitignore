@@ -4,3 +4,5 @@
 ./ravdess_preprocessing/anootation.txt
 *ravdess/
 *baseline-venv
+
+./EfficientFace_Trained_on_AffectNet7.pth.tar
