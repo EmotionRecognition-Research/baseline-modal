@@ -102,21 +102,23 @@ def train_epoch_multimodal(epoch, data_loader, model, criterion, optimizer, opt,
                       top5=top5,
                       lr=optimizer.param_groups[0]['lr']))
 
-    epoch_logger.log({
+    log = {
         'epoch': epoch,
         'loss': losses.avg.item(),
         'prec1': top1.avg.item(),
         'prec5': top5.avg.item(),
         'lr': optimizer.param_groups[0]['lr']
-    })
+    }
+    epoch_logger.log(log)
 
+    return log
  
 def train_epoch(epoch, data_loader, model, criterion, optimizer, opt,
                 epoch_logger, batch_logger):
     print('train at epoch {}'.format(epoch))
     
     if opt.model == 'multimodalcnn':
-        train_epoch_multimodal(epoch,  data_loader, model, criterion, optimizer, opt, epoch_logger, batch_logger)
-        return
+        log = train_epoch_multimodal(epoch,  data_loader, model, criterion, optimizer, opt, epoch_logger, batch_logger)
+        return log
     
     

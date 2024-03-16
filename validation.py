@@ -83,12 +83,15 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
                   top1=top1,
                   top5=top5))
 
-    logger.log({'epoch': epoch,
-                'loss': losses.avg.item(),
-                'prec1': top1.avg.item(),
-                'prec5': top5.avg.item()})
+    log = {
+            'epoch': epoch,
+            'loss': losses.avg.item(),
+            'prec1': top1.avg.item(),
+            'prec5': top5.avg.item()
+        }
+    logger.log(log)
 
-    return losses.avg.item(), top1.avg.item()
+    return losses.avg.item(), top1.avg.item(), log
 
 def val_epoch(epoch, data_loader, model, criterion, opt, logger, modality='both', dist=None):
     print('validation at epoch {}'.format(epoch))

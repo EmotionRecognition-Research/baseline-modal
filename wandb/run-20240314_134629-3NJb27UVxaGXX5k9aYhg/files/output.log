@@ -1,0 +1,114 @@
+[INFO] W&B run initialized successfully
+train at epoch 1
+train at epoch 1
+/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/utils/data/dataloader.py:478: UserWarning: This DataLoader will create 16 worker processes in total. Our suggested max number of worker in current system is 4, which is smaller than what this DataLoader is going to create. Please be aware that excessive worker creation might get DataLoader running slow or even freeze, lower the worker number to avoid potential slowness/freeze if necessary.
+  warnings.warn(_create_warning_msg(
+/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/functional.py:652: UserWarning: Named tensors and all their associated APIs are an experimental feature and subject to change. Please do not use them for anything important until they are released as stable. (Triggered internally at  /pytorch/c10/core/TensorImpl.h:1156.)
+  return torch.max_pool1d(input, kernel_size, stride, padding, dilation, ceil_mode)
+Epoch: [1][0/194]	 lr: 0.04000	Time 39.464 (39.464)	Data 12.420 (12.420)	Loss 2.1034 (2.1034)	Prec@1 0.00000 (0.00000)	Prec@5 71.87500 (71.87500)
+Epoch: [1][10/194]	 lr: 0.04000	Time 20.161 (21.978)	Data 0.012 (1.138)	Loss 2.1478 (2.3219)	Prec@1 21.87500 (12.21591)	Prec@5 71.87500 (63.92046)
+Epoch: [1][20/194]	 lr: 0.04000	Time 20.184 (21.114)	Data 0.011 (0.602)	Loss 1.8393 (2.1274)	Prec@1 34.37500 (18.60119)	Prec@5 68.75000 (71.87500)
+Epoch: [1][30/194]	 lr: 0.04000	Time 20.220 (20.834)	Data 0.010 (0.411)	Loss 1.5496 (1.9864)	Prec@1 50.00000 (26.91532)	Prec@5 87.50000 (75.10081)
+Epoch: [1][40/194]	 lr: 0.04000	Time 19.973 (20.687)	Data 0.012 (0.314)	Loss 1.3608 (1.9423)	Prec@1 43.75000 (28.50610)	Prec@5 90.62500 (76.29573)
+Epoch: [1][50/194]	 lr: 0.04000	Time 20.066 (20.592)	Data 0.012 (0.254)	Loss 1.6922 (1.8674)	Prec@1 37.50000 (30.88235)	Prec@5 81.25000 (79.22794)
+Epoch: [1][60/194]	 lr: 0.04000	Time 20.112 (20.516)	Data 0.011 (0.215)	Loss 1.4181 (1.8122)	Prec@1 40.62500 (32.99180)	Prec@5 87.50000 (80.99385)
+Epoch: [1][70/194]	 lr: 0.04000	Time 20.400 (20.490)	Data 0.011 (0.186)	Loss 1.2301 (1.7561)	Prec@1 68.75000 (34.94718)	Prec@5 90.62500 (82.48239)
+Epoch: [1][80/194]	 lr: 0.04000	Time 19.988 (20.467)	Data 0.011 (0.165)	Loss 1.3589 (1.7020)	Prec@1 46.87500 (37.03704)	Prec@5 96.87500 (83.95061)
+Epoch: [1][90/194]	 lr: 0.04000	Time 20.613 (20.443)	Data 0.011 (0.148)	Loss 1.4549 (1.6538)	Prec@1 37.50000 (38.77060)	Prec@5 87.50000 (84.99313)
+Epoch: [1][100/194]	 lr: 0.04000	Time 19.966 (20.423)	Data 0.011 (0.134)	Loss 1.2569 (1.6223)	Prec@1 43.75000 (39.72772)	Prec@5 100.00000 (86.16956)
+Epoch: [1][110/194]	 lr: 0.04000	Time 20.334 (20.407)	Data 0.012 (0.123)	Loss 1.0959 (1.5767)	Prec@1 68.75000 (41.77928)	Prec@5 96.87500 (87.07771)
+Epoch: [1][120/194]	 lr: 0.04000	Time 20.237 (20.396)	Data 0.011 (0.114)	Loss 1.8744 (1.5670)	Prec@1 21.87500 (41.68388)	Prec@5 87.50000 (87.39670)
+Epoch: [1][130/194]	 lr: 0.04000	Time 20.652 (20.431)	Data 0.012 (0.106)	Loss 1.4425 (1.5504)	Prec@1 43.75000 (42.10401)	Prec@5 90.62500 (87.95325)
+Epoch: [1][140/194]	 lr: 0.04000	Time 20.399 (20.436)	Data 0.011 (0.099)	Loss 1.1872 (1.5265)	Prec@1 50.00000 (43.08511)	Prec@5 100.00000 (88.54166)
+Epoch: [1][150/194]	 lr: 0.04000	Time 20.712 (20.444)	Data 0.011 (0.094)	Loss 1.1700 (1.5017)	Prec@1 56.25000 (44.20530)	Prec@5 96.87500 (88.88659)
+Epoch: [1][160/194]	 lr: 0.04000	Time 20.849 (20.459)	Data 0.012 (0.089)	Loss 1.0161 (1.4705)	Prec@1 68.75000 (45.65217)	Prec@5 93.75000 (89.34394)
+Epoch: [1][170/194]	 lr: 0.04000	Time 20.049 (20.430)	Data 0.011 (0.084)	Loss 1.2058 (1.4510)	Prec@1 50.00000 (46.05263)	Prec@5 96.87500 (89.78436)
+Epoch: [1][180/194]	 lr: 0.04000	Time 20.167 (20.407)	Data 0.012 (0.080)	Loss 0.7545 (1.4279)	Prec@1 71.87500 (46.90953)	Prec@5 100.00000 (90.17610)
+Epoch: [1][190/194]	 lr: 0.04000	Time 19.881 (20.393)	Data 0.011 (0.076)	Loss 1.6446 (1.4139)	Prec@1 43.75000 (47.44764)	Prec@5 84.37500 (90.44502)
+validation at epoch 1
+validation at epoch 1
+Epoch: [1][1/48]	Time 15.39646 (15.39646)	Data 9.97907 (9.97907)	Loss 1.3603 (1.3603)	Prec@1 50.00000 (50.00000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][2/48]	Time 1.81252 (8.60449)	Data 0.01009 (4.99458)	Loss 1.0815 (1.2209)	Prec@1 62.50000 (56.25000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][3/48]	Time 1.45639 (6.22179)	Data 0.00979 (3.33298)	Loss 2.2911 (1.5776)	Prec@1 12.50000 (41.66667)	Prec@5 100.00000 (100.00000)
+Epoch: [1][4/48]	Time 1.53638 (5.05044)	Data 0.00958 (2.50213)	Loss 1.6462 (1.5948)	Prec@1 50.00000 (43.75000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][5/48]	Time 1.44433 (4.32922)	Data 0.01072 (2.00385)	Loss 1.6586 (1.6075)	Prec@1 50.00000 (45.00000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][6/48]	Time 1.52276 (3.86147)	Data 0.01451 (1.67229)	Loss 2.4641 (1.7503)	Prec@1 25.00000 (41.66667)	Prec@5 100.00000 (100.00000)
+Epoch: [1][7/48]	Time 1.58000 (3.53555)	Data 0.01023 (1.43486)	Loss 2.6827 (1.8835)	Prec@1 25.00000 (39.28571)	Prec@5 100.00000 (100.00000)
+Epoch: [1][8/48]	Time 1.43568 (3.27306)	Data 0.00985 (1.25673)	Loss 2.9659 (2.0188)	Prec@1 12.50000 (35.93750)	Prec@5 100.00000 (100.00000)
+Epoch: [1][9/48]	Time 1.50099 (3.07617)	Data 0.01070 (1.11828)	Loss 1.7814 (1.9924)	Prec@1 37.50000 (36.11111)	Prec@5 100.00000 (100.00000)
+Epoch: [1][10/48]	Time 1.44099 (2.91265)	Data 0.00949 (1.00740)	Loss 1.5998 (1.9532)	Prec@1 50.00000 (37.50000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][11/48]	Time 1.57901 (2.79141)	Data 0.00955 (0.91669)	Loss 1.8750 (1.9461)	Prec@1 25.00000 (36.36364)	Prec@5 100.00000 (100.00000)
+Epoch: [1][12/48]	Time 1.54352 (2.68742)	Data 0.00948 (0.84109)	Loss 1.0862 (1.8744)	Prec@1 62.50000 (38.54167)	Prec@5 100.00000 (100.00000)
+Epoch: [1][13/48]	Time 1.54736 (2.59972)	Data 0.01158 (0.77728)	Loss 2.6366 (1.9330)	Prec@1 37.50000 (38.46154)	Prec@5 100.00000 (100.00000)
+Epoch: [1][14/48]	Time 1.61689 (2.52952)	Data 0.00942 (0.72243)	Loss 0.8380 (1.8548)	Prec@1 75.00000 (41.07143)	Prec@5 100.00000 (100.00000)
+Epoch: [1][15/48]	Time 1.40395 (2.45448)	Data 0.00920 (0.67488)	Loss 1.8200 (1.8525)	Prec@1 25.00000 (40.00000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][16/48]	Time 1.57133 (2.39929)	Data 0.00975 (0.63331)	Loss 0.5738 (1.7726)	Prec@1 75.00000 (42.18750)	Prec@5 100.00000 (100.00000)
+Epoch: [1][17/48]	Time 1.17640 (2.32735)	Data 0.02641 (0.59761)	Loss 0.0441 (1.6709)	Prec@1 100.00000 (45.58823)	Prec@5 100.00000 (100.00000)
+Epoch: [1][18/48]	Time 1.13943 (2.26136)	Data 0.00936 (0.56493)	Loss 0.2174 (1.5901)	Prec@1 87.50000 (47.91667)	Prec@5 100.00000 (100.00000)
+Epoch: [1][19/48]	Time 1.16398 (2.20360)	Data 0.00920 (0.53568)	Loss 0.4233 (1.5287)	Prec@1 87.50000 (50.00000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][20/48]	Time 1.13722 (2.15028)	Data 0.00941 (0.50937)	Loss 0.3392 (1.4693)	Prec@1 87.50000 (51.87500)	Prec@5 100.00000 (100.00000)
+Epoch: [1][21/48]	Time 1.17087 (2.10364)	Data 0.00919 (0.48555)	Loss 0.4646 (1.4214)	Prec@1 75.00000 (52.97619)	Prec@5 100.00000 (100.00000)
+Epoch: [1][22/48]	Time 1.16789 (2.06111)	Data 0.01235 (0.46404)	Loss 0.5092 (1.3800)	Prec@1 75.00000 (53.97727)	Prec@5 100.00000 (100.00000)
+Epoch: [1][23/48]	Time 1.24535 (2.02564)	Data 0.00925 (0.44427)	Loss 0.4191 (1.3382)	Prec@1 75.00000 (54.89130)	Prec@5 100.00000 (100.00000)
+Epoch: [1][24/48]	Time 1.16329 (1.98971)	Data 0.01064 (0.42620)	Loss 0.1764 (1.2898)	Prec@1 100.00000 (56.77083)	Prec@5 100.00000 (100.00000)
+Epoch: [1][25/48]	Time 1.19633 (1.95797)	Data 0.00911 (0.40952)	Loss 0.2858 (1.2496)	Prec@1 87.50000 (58.00000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][26/48]	Time 1.16298 (1.92740)	Data 0.00989 (0.39415)	Loss 0.6027 (1.2247)	Prec@1 75.00000 (58.65385)	Prec@5 100.00000 (100.00000)
+Epoch: [1][27/48]	Time 1.22987 (1.90156)	Data 0.00917 (0.37989)	Loss 0.6394 (1.2031)	Prec@1 50.00000 (58.33333)	Prec@5 100.00000 (100.00000)
+Epoch: [1][28/48]	Time 1.18484 (1.87597)	Data 0.00992 (0.36668)	Loss 1.3591 (1.2086)	Prec@1 62.50000 (58.48214)	Prec@5 100.00000 (100.00000)
+Epoch: [1][29/48]	Time 1.15294 (1.85103)	Data 0.00940 (0.35436)	Loss 0.7413 (1.1925)	Prec@1 50.00000 (58.18966)	Prec@5 100.00000 (100.00000)
+Epoch: [1][30/48]	Time 1.16552 (1.82818)	Data 0.00919 (0.34285)	Loss 0.5583 (1.1714)	Prec@1 75.00000 (58.75000)	Prec@5 100.00000 (100.00000)
+Epoch: [1][31/48]	Time 1.14602 (1.80618)	Data 0.00916 (0.33209)	Loss 0.5497 (1.1513)	Prec@1 87.50000 (59.67742)	Prec@5 100.00000 (100.00000)
+Epoch: [1][32/48]	Time 1.15672 (1.78588)	Data 0.00923 (0.32200)	Loss 1.0374 (1.1478)	Prec@1 50.00000 (59.37500)	Prec@5 100.00000 (100.00000)
+Epoch: [1][33/48]	Time 1.15104 (1.76664)	Data 0.01072 (0.31256)	Loss 0.5274 (1.1290)	Prec@1 75.00000 (59.84848)	Prec@5 100.00000 (100.00000)
+Epoch: [1][34/48]	Time 1.57801 (1.76110)	Data 0.04205 (0.30461)	Loss 0.6629 (1.1152)	Prec@1 75.00000 (60.29412)	Prec@5 100.00000 (100.00000)
+Epoch: [1][35/48]	Time 1.26050 (1.74679)	Data 0.01087 (0.29622)	Loss 0.4653 (1.0967)	Prec@1 75.00000 (60.71429)	Prec@5 100.00000 (100.00000)
+Epoch: [1][36/48]	Time 1.17490 (1.73091)	Data 0.01147 (0.28831)	Loss 0.7210 (1.0862)	Prec@1 50.00000 (60.41667)	Prec@5 100.00000 (100.00000)
+Epoch: [1][37/48]	Time 1.16547 (1.71563)	Data 0.01097 (0.28081)	Loss 1.5660 (1.0992)	Prec@1 50.00000 (60.13514)	Prec@5 100.00000 (100.00000)
+Epoch: [1][38/48]	Time 1.14255 (1.70054)	Data 0.01088 (0.27371)	Loss 2.4998 (1.1361)	Prec@1 37.50000 (59.53947)	Prec@5 100.00000 (100.00000)
+Epoch: [1][39/48]	Time 1.23142 (1.68852)	Data 0.01133 (0.26698)	Loss 1.0206 (1.1331)	Prec@1 62.50000 (59.61538)	Prec@5 100.00000 (100.00000)
+Epoch: [1][40/48]	Time 1.16916 (1.67553)	Data 0.01105 (0.26058)	Loss 2.3698 (1.1640)	Prec@1 50.00000 (59.37500)	Prec@5 100.00000 (100.00000)
+Epoch: [1][41/48]	Time 1.17992 (1.66344)	Data 0.01123 (0.25450)	Loss 2.1849 (1.1889)	Prec@1 62.50000 (59.45122)	Prec@5 100.00000 (100.00000)
+Epoch: [1][42/48]	Time 1.15903 (1.65143)	Data 0.01093 (0.24870)	Loss 2.4154 (1.2181)	Prec@1 37.50000 (58.92857)	Prec@5 87.50000 (99.70238)
+Epoch: [1][43/48]	Time 1.17735 (1.64041)	Data 0.01104 (0.24317)	Loss 2.2800 (1.2428)	Prec@1 37.50000 (58.43023)	Prec@5 100.00000 (99.70930)
+Epoch: [1][44/48]	Time 1.18479 (1.63005)	Data 0.01102 (0.23790)	Loss 3.4574 (1.2932)	Prec@1 37.50000 (57.95454)	Prec@5 87.50000 (99.43182)
+Epoch: [1][45/48]	Time 1.18668 (1.62020)	Data 0.01093 (0.23285)	Loss 1.0476 (1.2877)	Prec@1 75.00000 (58.33333)	Prec@5 100.00000 (99.44444)
+Epoch: [1][46/48]	Time 1.14266 (1.60982)	Data 0.01114 (0.22803)	Loss 1.6613 (1.2958)	Prec@1 50.00000 (58.15217)	Prec@5 100.00000 (99.45652)
+Epoch: [1][47/48]	Time 1.16414 (1.60034)	Data 0.01134 (0.22342)	Loss 2.7012 (1.3257)	Prec@1 62.50000 (58.24468)	Prec@5 100.00000 (99.46809)
+Epoch: [1][48/48]	Time 1.15621 (1.59108)	Data 0.01087 (0.21899)	Loss 1.2714 (1.3246)	Prec@1 62.50000 (58.33333)	Prec@5 100.00000 (99.47916)
+train at epoch 2
+train at epoch 2
+Epoch: [2][0/194]	 lr: 0.04000	Time 41.352 (41.352)	Data 12.284 (12.284)	Loss 0.8411 (0.8411)	Prec@1 62.50000 (62.50000)	Prec@5 96.87500 (96.87500)
+Traceback (most recent call last):
+  File "main.py", line 129, in <module>
+    log = train_epoch(i, train_loader, model, criterion, optimizer, opt,
+  File "/home/dmura/baseline-modal/train.py", line 121, in train_epoch
+    log = train_epoch_multimodal(epoch,  data_loader, model, criterion, optimizer, opt, epoch_logger, batch_logger)
+  File "/home/dmura/baseline-modal/train.py", line 64, in train_epoch_multimodal
+    outputs = model(audio_inputs, visual_inputs)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dmura/baseline-modal/models/multimodalcnn.py", line 204, in forward
+    return self.forward_feature_2(x_audio, x_visual)
+  File "/home/dmura/baseline-modal/models/multimodalcnn.py", line 240, in forward_feature_2
+    x_visual = self.visual_model.forward_features(x_visual)
+  File "/home/dmura/baseline-modal/models/multimodalcnn.py", line 67, in forward_features
+    x = self.stage4(x)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dmura/baseline-modal/models/efficientface.py", line 130, in forward
+    out = torch.cat((self.branch1(x), self.branch2(x)), dim=1)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/container.py", line 139, in forward
+    input = module(input)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/module.py", line 1051, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 443, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/dmura/anaconda3/envs/idl-baseline-env/lib/python3.8/site-packages/torch/nn/modules/conv.py", line 439, in _conv_forward
+    return F.conv2d(input, weight, bias, self.stride,
+RuntimeError: [enforce fail at CPUAllocator.cpp:71] . DefaultCPUAllocator: can't allocate memory: you tried to allocate 87306240 bytes. Error code 12 (Cannot allocate memory)

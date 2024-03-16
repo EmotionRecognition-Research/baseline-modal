@@ -1,0 +1,28 @@
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Current SDK version is 0.16.4
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Configure stats pid to 5486
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Loading settings from /home/dmura/.config/wandb/settings
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Loading settings from /home/dmura/baseline-modal/wandb/settings
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'main.py', 'program_abspath': '/home/dmura/baseline-modal/main.py', 'program': 'main.py'}
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_setup.py:_flush():76] Applying login settings: {'api_key': '***REDACTED***'}
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:_log_setup():526] Logging user logs to /home/dmura/baseline-modal/wandb/run-20240314_134629-3NJb27UVxaGXX5k9aYhg/logs/debug.log
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:_log_setup():527] Logging internal logs to /home/dmura/baseline-modal/wandb/run-20240314_134629-3NJb27UVxaGXX5k9aYhg/logs/debug-internal.log
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:init():566] calling init triggers
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:init():573] wandb.init called with sweep_config: {}
+config: {}
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:init():616] starting backend
+2024-03-14 13:46:29,986 INFO    MainThread:5486 [wandb_init.py:init():620] setting up manager
+2024-03-14 13:46:29,990 INFO    MainThread:5486 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-03-14 13:46:29,992 INFO    MainThread:5486 [wandb_init.py:init():628] backend started and connected
+2024-03-14 13:46:30,001 INFO    MainThread:5486 [wandb_init.py:init():720] updated telemetry
+2024-03-14 13:46:30,011 INFO    MainThread:5486 [wandb_init.py:init():753] communicating run to backend with 90.0 second timeout
+2024-03-14 13:46:30,492 INFO    MainThread:5486 [wandb_run.py:_on_init():2262] communicating current version
+2024-03-14 13:46:30,636 INFO    MainThread:5486 [wandb_run.py:_on_init():2271] got version response 
+2024-03-14 13:46:30,636 INFO    MainThread:5486 [wandb_init.py:init():804] starting run threads in backend
+2024-03-14 13:46:33,038 INFO    MainThread:5486 [wandb_run.py:_console_start():2241] atexit reg
+2024-03-14 13:46:33,038 INFO    MainThread:5486 [wandb_run.py:_redirect():2096] redirect: wrap_raw
+2024-03-14 13:46:33,039 INFO    MainThread:5486 [wandb_run.py:_redirect():2161] Wrapping output streams.
+2024-03-14 13:46:33,039 INFO    MainThread:5486 [wandb_run.py:_redirect():2186] Redirects installed.
+2024-03-14 13:46:33,040 INFO    MainThread:5486 [wandb_init.py:init():847] run started, returning control to user process
+2024-03-14 14:57:24,042 WARNING MsgRouterThr:5486 [router.py:message_loop():77] message_loop has been closed
