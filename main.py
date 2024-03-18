@@ -20,6 +20,8 @@ from train import train_epoch
 from validation import val_epoch
 import time
 
+from wandb_integration import initialize_wandb
+
 
 if __name__ == '__main__':
     opt = parse_opts()
@@ -114,26 +116,41 @@ if __name__ == '__main__':
             best_prec1 = checkpoint['best_prec1']
             opt.begin_epoch = checkpoint['epoch']
             model.load_state_dict(checkpoint['state_dict'])
+        
+        wandb_agent = initialize_wandb()
 
         for i in range(opt.begin_epoch, opt.n_epochs + 1):
 
             if not opt.no_train:
                 adjust_learning_rate(optimizer, i, opt)
-                train_epoch(i, train_loader, model, criterion, optimizer, opt,
+                log = train_epoch(i, train_loader, model, criterion, optimizer, opt,
                             train_logger, train_batch_logger)
+                wandb_agent.log_metrics(
+                    metrics=log,
+                    step=log.epoch
+                )
                 state = {
                     'epoch': i,
                     'arch': opt.arch,
                     'state_dict': model.state_dict(),
                     'optimizer': optimizer.state_dict(),
                     'best_prec1': best_prec1
-                    }
+                }
                 save_checkpoint(state, False, opt, fold)
             
             if not opt.no_val:
                 
-                validation_loss, prec1 = val_epoch(i, val_loader, model, criterion, opt,
+                validation_loss, prec1, log = val_epoch(i, val_loader, model, criterion, opt,
                                             val_logger)
+                wandb_agent.log_metrics(
+                    metrics={
+                        "validation_epoch": log['epoch'],
+                        "validation_loss": log['loss'],
+                        'validation_prec1': log['prec1'],
+                        'validation_prec5': log['prec5']
+                    },
+                    step=log['epoch']
+                )
                 is_best = prec1 > best_prec1
                 best_prec1 = max(prec1, best_prec1)
                 state = {
@@ -142,7 +159,7 @@ if __name__ == '__main__':
                     'state_dict': model.state_dict(),
                     'optimizer': optimizer.state_dict(),
                     'best_prec1': best_prec1
-                }      
+                }     
                 save_checkpoint(state, is_best, opt, fold)
 
                

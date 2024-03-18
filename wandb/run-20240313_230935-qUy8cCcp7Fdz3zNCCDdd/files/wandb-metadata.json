@@ -1,0 +1,53 @@
+{
+    "os": "Windows-10-10.0.22621-SP0",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-03-13T21:09:39.391276",
+    "startedAt": "2024-03-13T21:09:35.107788",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": ".\\main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/EmotionRecognition-Research/baseline-modal.git",
+        "commit": "2f7997e95de64985c28315bce6b6b9169f599a32"
+    },
+    "email": "dmurairimukongya@gmail.com",
+    "root": "C:/Users/dmura/Documents/CMU/Spring2024/DeepLearning/final_project/multimodal-emotion-recognition",
+    "host": "vivaldi",
+    "username": "dmura",
+    "executable": "C:\\Users\\dmura\\anaconda3\\envs\\idl-baseline-env\\python.exe",
+    "cpu_count": 10,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1700.0,
+        "min": 0.0,
+        "max": 1700.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1700.0,
+            "min": 0.0,
+            "max": 1700.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 348.59374618530273,
+            "used": 260.1439781188965
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 15.640907287597656
+    }
+}

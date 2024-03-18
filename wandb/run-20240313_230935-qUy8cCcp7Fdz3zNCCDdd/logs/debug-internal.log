@@ -1,0 +1,1046 @@
+2024-03-13 23:09:35,123 INFO    StreamThr :28240 [internal.py:wandb_internal():86] W&B internal server running at pid: 28240, started at: 2024-03-13 23:09:35.123485
+2024-03-13 23:09:35,123 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status
+2024-03-13 23:09:35,123 INFO    WriterThread:28240 [datastore.py:open_for_write():87] open: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\run-qUy8cCcp7Fdz3zNCCDdd.wandb
+2024-03-13 23:09:35,123 DEBUG   SenderThread:28240 [sender.py:send():378] send: header
+2024-03-13 23:09:35,264 DEBUG   SenderThread:28240 [sender.py:send():378] send: run
+2024-03-13 23:09:36,394 INFO    SenderThread:28240 [dir_watcher.py:__init__():211] watching files in: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files
+2024-03-13 23:09:36,394 INFO    SenderThread:28240 [sender.py:_start_run_threads():1099] run started: qUy8cCcp7Fdz3zNCCDdd with start time 1710364175.123484
+2024-03-13 23:09:36,394 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: check_version
+2024-03-13 23:09:36,408 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: check_version
+2024-03-13 23:09:37,581 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: run_start
+2024-03-13 23:09:39,356 DEBUG   HandlerThread:28240 [system_info.py:__init__():26] System info init
+2024-03-13 23:09:39,356 DEBUG   HandlerThread:28240 [system_info.py:__init__():41] System info init done
+2024-03-13 23:09:39,356 INFO    HandlerThread:28240 [system_monitor.py:start():194] Starting system monitor
+2024-03-13 23:09:39,356 INFO    SystemMonitor:28240 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-13 23:09:39,356 INFO    HandlerThread:28240 [system_monitor.py:probe():214] Collecting system info
+2024-03-13 23:09:39,359 INFO    SystemMonitor:28240 [interfaces.py:start():190] Started cpu monitoring
+2024-03-13 23:09:39,359 INFO    SystemMonitor:28240 [interfaces.py:start():190] Started disk monitoring
+2024-03-13 23:09:39,359 INFO    SystemMonitor:28240 [interfaces.py:start():190] Started gpu monitoring
+2024-03-13 23:09:39,359 INFO    SystemMonitor:28240 [interfaces.py:start():190] Started memory monitoring
+2024-03-13 23:09:39,381 INFO    SystemMonitor:28240 [interfaces.py:start():190] Started network monitoring
+2024-03-13 23:09:39,391 DEBUG   HandlerThread:28240 [system_info.py:probe():150] Probing system
+2024-03-13 23:09:39,391 DEBUG   HandlerThread:28240 [system_info.py:_probe_git():135] Probing git
+2024-03-13 23:09:39,501 DEBUG   HandlerThread:28240 [system_info.py:_probe_git():143] Probing git done
+2024-03-13 23:09:39,501 DEBUG   HandlerThread:28240 [system_info.py:probe():198] Probing system done
+2024-03-13 23:09:39,501 DEBUG   HandlerThread:28240 [system_monitor.py:probe():223] {'os': 'Windows-10-10.0.22621-SP0', 'python': '3.8.18', 'heartbeatAt': '2024-03-13T21:09:39.391276', 'startedAt': '2024-03-13T21:09:35.107788', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': '.\\main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/EmotionRecognition-Research/baseline-modal.git', 'commit': '2f7997e95de64985c28315bce6b6b9169f599a32'}, 'email': 'dmurairimukongya@gmail.com', 'root': 'C:/Users/dmura/Documents/CMU/Spring2024/DeepLearning/final_project/multimodal-emotion-recognition', 'host': 'vivaldi', 'username': 'dmura', 'executable': 'C:\\Users\\dmura\\anaconda3\\envs\\idl-baseline-env\\python.exe', 'cpu_count': 10, 'cpu_count_logical': 12, 'cpu_freq': {'current': 1700.0, 'min': 0.0, 'max': 1700.0}, 'cpu_freq_per_core': [{'current': 1700.0, 'min': 0.0, 'max': 1700.0}], 'disk': {'/': {'total': 348.59374618530273, 'used': 260.1439781188965}}, 'gpu': 'NVIDIA GeForce RTX 2050', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2050', 'memory_total': 4294967296}], 'memory': {'total': 15.640907287597656}}
+2024-03-13 23:09:39,501 INFO    HandlerThread:28240 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-13 23:09:39,501 INFO    HandlerThread:28240 [system_monitor.py:probe():227] Publishing system info
+2024-03-13 23:09:39,501 DEBUG   HandlerThread:28240 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-03-13 23:09:39,501 ERROR   HandlerThread:28240 [system_info.py:_save_conda():218] Error saving conda packages: [WinError 2] The system cannot find the file specified
+Traceback (most recent call last):
+  File "C:\Users\dmura\anaconda3\envs\idl-baseline-env\lib\site-packages\wandb\sdk\internal\system\system_info.py", line 214, in _save_conda
+    subprocess.call(
+  File "C:\Users\dmura\anaconda3\envs\idl-baseline-env\lib\subprocess.py", line 340, in call
+    with Popen(*popenargs, **kwargs) as p:
+  File "C:\Users\dmura\anaconda3\envs\idl-baseline-env\lib\subprocess.py", line 858, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\dmura\anaconda3\envs\idl-baseline-env\lib\subprocess.py", line 1327, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+FileNotFoundError: [WinError 2] The system cannot find the file specified
+2024-03-13 23:09:39,532 DEBUG   HandlerThread:28240 [system_info.py:_save_conda():219] Saving conda packages done
+2024-03-13 23:09:39,532 INFO    HandlerThread:28240 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-13 23:09:39,532 DEBUG   SenderThread:28240 [sender.py:send():378] send: files
+2024-03-13 23:09:39,532 INFO    SenderThread:28240 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-03-13 23:09:39,689 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-13 23:09:39,689 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: python_packages
+2024-03-13 23:09:39,689 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:09:39,689 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:09:39,689 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:09:40,285 DEBUG   SenderThread:28240 [sender.py:send():378] send: telemetry
+2024-03-13 23:09:40,285 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:09:40,425 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\requirements.txt
+2024-03-13 23:09:40,425 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\conda-environment.yaml
+2024-03-13 23:09:40,425 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\output.log
+2024-03-13 23:09:40,425 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_created():271] file/dir created: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\wandb-metadata.json
+2024-03-13 23:09:41,007 INFO    wandb-upload_0:28240 [upload_job.py:push():131] Uploaded file C:\Users\dmura\AppData\Local\Temp\tmpi4fyf222wandb\1rep65rt-wandb-metadata.json
+2024-03-13 23:09:41,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:41,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:42,442 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\output.log
+2024-03-13 23:09:44,414 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:44,414 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:45,332 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:09:46,926 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:46,926 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:49,432 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:49,432 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:50,357 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:09:51,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:51,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:54,418 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:54,418 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:54,701 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:09:54,701 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:09:54,701 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:09:56,054 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:09:56,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:56,923 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:59,417 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:09:59,417 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:01,106 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:01,931 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:01,931 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:04,442 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:04,443 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:06,137 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:06,966 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:06,966 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:08,647 INFO    Thread-16 :28240 [dir_watcher.py:_on_file_modified():288] file/dir modified: C:\Users\dmura\Documents\CMU\Spring2024\DeepLearning\final_project\multimodal-emotion-recognition\wandb\run-20240313_230935-qUy8cCcp7Fdz3zNCCDdd\files\config.yaml
+2024-03-13 23:10:09,482 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:09,482 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:09,712 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:10:09,714 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:10:09,715 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:10:11,985 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:11,985 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:14,063 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:14,498 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:14,499 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:19,125 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:19,592 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:19,592 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:22,083 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:22,083 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:24,153 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:24,593 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:24,593 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:24,709 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:10:24,709 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:10:24,709 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:10:27,102 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:27,103 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:29,611 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:29,611 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:30,062 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:32,093 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:32,093 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:34,592 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:34,592 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:35,093 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:37,106 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:37,106 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:39,382 DEBUG   SystemMonitor:28240 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-03-13 23:10:39,384 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:10:39,647 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:39,648 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:39,719 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:10:39,720 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:10:39,720 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:10:41,101 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:42,168 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:42,169 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:44,670 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:44,671 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:46,133 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:47,184 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:47,185 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:49,690 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:49,690 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:51,167 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:52,195 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:52,195 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:54,730 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:10:54,742 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:10:54,742 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:10:54,750 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:54,750 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:57,131 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:10:57,271 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:57,271 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:59,774 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:10:59,775 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:02,175 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:02,281 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:02,282 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:04,797 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:04,797 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:07,195 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:07,279 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:07,279 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:09,393 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:11:09,716 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:11:09,744 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:11:09,745 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:11:09,778 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:09,778 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:12,197 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:12,281 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:12,281 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:14,791 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:14,791 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:17,237 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:17,294 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:17,294 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:19,797 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:19,797 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:22,280 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:22,302 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:22,308 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:24,724 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:11:24,738 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:11:24,739 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:11:24,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:24,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:27,329 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:27,330 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:28,118 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:29,824 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:29,824 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:32,363 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:11:32,363 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:32,363 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:33,135 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:34,869 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:34,869 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:37,368 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:37,368 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:38,174 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:39,407 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:11:39,700 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:11:39,733 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:11:39,750 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:11:39,752 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:11:39,878 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:39,879 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:42,380 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:42,380 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:44,098 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:44,870 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:44,870 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:47,376 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:47,380 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:49,143 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:49,878 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:49,878 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:52,405 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:52,405 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:54,172 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:54,748 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:11:54,764 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:11:54,764 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:11:54,929 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:54,930 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:57,433 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:57,433 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:59,226 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:11:59,952 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:11:59,952 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:02,460 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:02,460 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:04,259 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:04,958 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:04,958 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:07,490 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:07,492 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:09,292 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:09,415 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:12:09,701 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:12:09,756 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:12:09,790 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:12:09,792 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:12:10,048 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:12:10,057 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:10,057 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:12,561 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:12,561 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:15,082 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:15,082 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:15,129 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:17,571 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:17,571 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:20,083 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:20,083 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:20,162 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:22,593 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:22,593 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:24,768 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:12:24,801 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:12:24,802 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:12:25,086 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:25,086 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:26,142 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:27,590 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:27,590 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:30,072 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:30,083 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:31,184 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:32,601 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:32,601 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:35,103 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:35,104 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:36,218 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:37,617 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:37,617 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:39,432 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:12:39,700 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:12:39,781 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:12:39,813 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:12:39,814 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:12:40,117 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:40,118 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:42,222 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:42,614 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:42,614 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:45,118 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:45,118 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:47,275 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:47,655 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:12:47,667 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:47,667 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:50,167 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:50,167 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:52,307 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:12:52,677 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:52,677 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:54,792 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:12:54,827 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:12:54,827 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:12:55,157 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:55,173 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:57,680 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:57,680 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:12:58,256 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:00,196 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:00,196 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:02,705 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:02,705 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:03,286 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:05,220 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:05,220 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:07,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:07,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:08,316 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:09,445 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:13:09,717 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:13:09,806 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:13:09,833 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:13:09,833 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:13:10,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:10,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:12,679 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:12,679 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:14,220 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:15,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:15,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:17,696 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:17,696 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:19,249 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:20,205 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:20,205 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:22,718 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:22,718 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:24,294 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:24,812 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:13:24,844 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:13:24,844 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:13:25,223 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:13:25,239 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:25,239 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:27,742 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:27,742 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:30,212 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:30,243 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:30,243 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:32,738 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:32,738 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:35,236 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:35,236 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:35,252 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:37,753 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:37,753 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:39,454 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:13:39,739 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:13:39,818 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:13:39,850 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:13:39,850 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:13:40,242 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:40,242 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:41,221 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:42,755 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:42,755 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:45,258 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:45,258 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:46,266 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:47,754 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:47,754 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:50,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:50,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:51,286 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:52,764 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:52,764 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:54,831 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:13:54,863 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:13:54,863 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:13:55,272 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:55,272 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:57,191 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:13:57,774 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:13:57,774 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:00,277 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:00,277 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:02,236 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:02,802 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:14:02,817 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:02,817 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:05,318 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:05,318 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:07,260 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:07,811 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:07,811 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:09,477 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:14:09,761 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:14:09,839 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:14:09,871 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:14:09,871 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:14:10,326 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:10,326 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:12,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:12,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:13,238 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:15,318 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:15,318 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:17,808 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:17,808 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:18,276 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:20,299 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:20,299 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:22,812 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:22,812 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:23,332 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:24,843 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:14:24,889 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:14:24,889 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:14:25,315 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:25,315 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:27,805 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:27,805 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:29,284 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:30,305 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:30,305 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:32,798 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:32,798 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:34,342 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:35,289 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:35,289 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:37,787 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:37,787 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:39,372 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:39,484 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:14:39,774 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:14:39,847 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:14:39,908 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:14:39,908 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:14:40,304 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:14:40,320 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:40,320 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:42,832 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:42,832 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:45,239 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:45,317 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:45,317 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:47,817 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:47,817 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:50,268 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:50,317 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:50,317 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:52,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:52,814 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:54,851 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:14:54,920 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:14:54,920 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:14:55,315 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:55,315 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:56,238 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:14:57,824 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:14:57,824 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:00,331 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:00,331 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:01,279 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:02,825 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:02,825 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:05,324 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:05,324 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:06,332 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:07,835 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:07,835 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:09,490 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:15:09,767 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:15:09,865 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:15:09,946 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:15:09,946 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:15:10,327 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:10,328 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:12,330 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:12,827 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:12,827 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:15,332 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:15,332 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:17,377 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:17,868 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:15:17,876 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:17,876 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:20,368 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:20,369 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:22,419 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:22,857 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:22,857 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:24,882 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:15:24,955 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:15:24,956 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:15:25,350 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:25,350 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:27,853 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:27,853 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:28,354 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:30,356 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:30,356 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:32,855 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:32,856 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:33,402 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:35,338 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:35,338 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:37,834 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:37,834 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:38,452 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:39,502 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:15:39,772 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:15:39,882 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:15:39,966 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:15:39,966 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:15:40,353 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:40,353 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:42,866 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:42,867 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:44,317 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:45,379 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:45,379 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:47,876 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:47,876 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:49,334 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:50,382 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:50,382 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:52,893 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:52,893 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:54,381 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:15:54,881 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:15:54,979 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:15:54,980 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:15:55,415 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:15:55,415 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:55,415 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:57,930 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:57,930 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:15:59,430 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:00,455 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:00,455 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:02,954 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:02,954 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:04,446 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:05,462 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:05,462 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:07,982 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:07,982 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:09,482 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:09,515 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:16:09,796 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:16:09,911 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:16:09,993 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:16:09,993 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:16:10,475 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:10,475 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:12,993 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:12,993 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:15,324 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:15,494 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:15,494 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:17,992 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:17,992 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:20,343 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:20,495 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:20,495 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:22,996 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:22,997 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:24,923 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:16:24,989 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:16:24,990 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:16:25,501 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:25,501 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:26,288 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:28,004 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:28,004 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:30,521 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:30,521 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:31,317 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:33,060 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:16:33,070 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:33,070 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:35,586 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:35,587 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:36,345 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:38,079 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:38,079 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:39,516 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:16:39,935 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:16:39,998 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:16:39,998 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:16:40,574 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:40,574 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:41,380 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:43,081 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:43,081 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:45,599 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:45,599 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:46,413 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:48,104 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:48,104 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:50,627 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:50,628 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:51,460 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:53,147 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:53,147 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:54,944 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:16:55,011 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:16:55,013 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:16:55,657 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:55,657 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:57,391 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:16:58,155 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:16:58,155 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:00,665 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:00,666 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:02,423 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:03,161 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:03,161 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:05,657 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:05,657 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:07,456 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:08,152 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:08,156 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:09,526 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:17:09,795 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:17:09,951 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:17:10,014 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:17:10,014 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:17:10,696 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:17:10,710 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:10,710 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:13,209 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:13,209 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:13,434 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:15,711 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:15,711 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:18,204 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:18,204 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:18,465 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:20,718 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:20,719 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:23,197 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:23,197 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:23,500 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:24,966 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:17:25,037 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:17:25,038 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:17:25,684 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:25,684 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:28,201 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:28,201 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:29,430 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:30,704 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:30,704 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:33,201 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:33,201 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:34,464 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:35,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:35,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:38,205 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:38,205 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:39,529 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:17:39,530 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:39,797 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:17:39,978 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:17:40,045 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:17:40,046 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:17:40,695 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:40,695 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:43,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:43,191 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:45,510 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:45,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:45,709 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:48,259 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:17:48,259 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:48,259 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:50,538 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:50,752 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:50,752 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:53,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:53,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:54,973 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:17:55,059 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:17:55,059 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:17:55,751 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:55,751 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:56,439 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:17:58,250 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:17:58,250 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:00,756 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:00,757 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:01,471 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:03,267 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:03,267 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:05,755 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:05,755 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:06,541 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:08,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:08,249 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:09,534 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:18:09,872 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:18:09,987 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:18:10,062 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:18:10,062 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:18:10,755 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:10,757 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:12,384 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:13,252 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:13,252 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:15,762 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:15,762 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:17,419 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:18,262 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:18,263 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:20,767 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:20,768 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:22,445 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:23,276 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:23,276 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:24,999 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:18:25,082 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:18:25,083 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:18:25,799 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:18:25,822 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:25,822 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:27,472 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:28,329 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:28,329 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:30,816 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:30,816 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:32,497 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:33,327 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:33,327 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:35,820 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:35,820 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:37,538 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:38,324 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:38,324 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:39,553 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:18:39,875 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:18:40,008 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:18:40,076 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:18:40,077 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:18:40,819 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:40,819 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:43,333 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:43,333 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:43,473 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:45,857 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:45,858 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:48,373 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:48,373 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:48,507 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:50,888 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:50,888 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:53,390 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:53,391 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:53,553 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:18:54,999 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:18:55,078 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:18:55,078 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:18:55,879 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:55,895 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:58,384 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:58,400 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:18:59,448 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:00,895 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:00,895 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:03,437 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:19:03,465 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:03,465 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:04,486 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:05,957 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:05,958 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:08,457 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:08,457 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:09,517 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:09,553 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:19:09,835 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:19:10,021 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:19:10,095 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:19:10,096 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:19:10,962 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:10,962 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:13,466 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:13,468 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:15,491 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:15,980 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:15,980 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:18,496 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:18,496 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:20,512 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:20,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:20,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:23,510 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:23,511 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:25,007 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:19:25,094 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:19:25,095 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:19:26,027 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:26,028 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:26,450 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:28,533 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:28,533 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:31,033 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:31,033 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:31,479 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:33,535 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:33,536 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:36,040 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:36,041 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:36,504 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:38,547 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:38,547 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:39,563 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:19:39,843 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:19:40,020 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:19:40,114 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:19:40,114 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:19:41,104 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:19:41,122 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:41,122 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:41,537 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:43,620 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:43,620 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:46,133 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:46,134 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:46,570 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:48,625 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:48,625 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:51,130 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:51,130 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:51,602 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:53,629 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:53,630 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:55,034 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:19:55,117 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:19:55,118 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:19:56,135 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:56,136 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:57,497 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:19:58,645 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:19:58,645 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:01,153 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:01,153 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:02,517 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:03,664 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:03,664 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:06,168 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:06,168 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:07,539 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:08,699 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:08,699 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:09,570 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:20:09,840 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:20:10,050 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:20:10,127 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:20:10,129 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:20:11,204 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:11,204 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:13,506 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:13,713 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:13,713 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:16,230 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:16,230 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:18,530 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:18,780 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:20:18,795 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:18,795 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:21,307 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:21,307 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:23,573 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:23,823 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:23,823 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:25,066 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:20:25,139 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:20:25,139 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:20:26,319 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:26,319 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:28,841 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:28,841 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:29,459 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:31,338 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:31,338 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:33,858 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:33,858 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:34,487 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:36,350 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:36,350 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:38,831 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:38,831 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:39,517 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:39,581 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:20:39,858 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:20:40,069 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:20:40,164 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:20:40,164 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:20:41,342 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:41,342 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:43,845 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:43,845 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:45,499 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:46,333 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:46,333 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:48,846 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:48,846 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:50,547 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:51,344 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:51,345 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:53,846 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:53,846 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:55,075 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:20:55,182 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:20:55,182 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:20:55,563 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:20:56,356 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:20:56,356 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:56,356 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:58,852 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:20:58,852 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:00,595 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:01,361 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:01,361 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:03,844 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:03,844 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:05,642 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:06,367 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:06,367 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:08,876 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:08,877 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:09,586 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:21:09,869 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:21:10,079 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:21:10,191 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:21:10,191 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:21:11,379 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:11,379 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:11,556 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:13,879 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:13,879 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:16,407 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:16,407 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:16,589 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:18,909 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:18,909 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:21,433 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:21,433 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:21,630 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:23,934 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:23,934 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:25,083 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:21:25,203 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:21:25,203 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:21:26,449 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:26,449 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:27,538 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:28,952 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:28,952 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:31,452 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:31,452 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:32,599 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:33,976 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:21:33,976 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:33,976 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:36,484 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:36,484 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:37,661 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:39,002 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:39,002 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:39,587 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:21:39,868 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:21:40,085 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:21:40,215 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:21:40,217 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:21:41,480 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:41,496 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:43,546 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:43,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:43,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:46,507 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:46,507 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:48,596 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:48,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:48,999 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:51,521 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:51,522 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:53,641 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:21:54,017 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:54,017 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:55,095 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:21:55,226 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:21:55,226 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:21:56,523 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:56,523 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:59,022 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:59,022 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:21:59,635 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:22:01,527 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:01,527 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:04,030 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:04,030 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:04,662 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:22:06,522 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:06,522 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:09,058 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:09,058 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:09,587 DEBUG   SenderThread:28240 [sender.py:send():378] send: stats
+2024-03-13 23:22:09,861 ERROR   FileStreamThread:28240 [file_stream.py:_handle_response():504] dropped chunk 404 Client Error: Not Found for url: https://api.wandb.ai/files/team-azam/baseline-modal/qUy8cCcp7Fdz3zNCCDdd/file_stream
+NoneType: None
+2024-03-13 23:22:10,106 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:22:10,138 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:22:10,224 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:22:10,226 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status
+2024-03-13 23:22:11,587 ERROR   gpu       :28240 [interfaces.py:aggregate():161] Failed to serialize metric: division by zero
+2024-03-13 23:22:11,595 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:11,595 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:14,126 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:14,126 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:15,589 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:22:16,624 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:16,624 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:19,110 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:19,110 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:20,639 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: status_report
+2024-03-13 23:22:21,587 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:21,587 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:24,075 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:24,075 ERROR   gpu       :28240 [interfaces.py:monitor():144] Failed to sample metric: No data
+2024-03-13 23:22:25,113 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-13 23:22:25,238 DEBUG   HandlerThread:28240 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-13 23:22:25,238 DEBUG   SenderThread:28240 [sender.py:send_request():405] send_request: stop_status

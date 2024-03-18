@@ -4,11 +4,27 @@ This code is based on https://github.com/okankop/Efficient-3DCNNs
 '''
 
 import argparse
+import random
+import string
 
+
+def generate_random_string(length=20):
+    """Generate a random string of specified length."""
+    return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
 
 def parse_opts():
     parser = argparse.ArgumentParser()
     parser.add_argument('--annotation_path', default='ravdess_preprocessing/annotations.txt', type=str, help='Annotation file path')
+    
+    parser.add_argument('--wandb_api_key', default='67854161c8597710d75225dc126932a363af1945', type=str, help='wandb api key')    
+    parser.add_argument('--wandb-run-id', default=generate_random_string(), type=str, help='Specific run id to resume a previous run (optional)')
+    parser.add_argument('--wandb-resume', default=False, choices=['must', 'allow'], help='Resume previous runs; use "must" to resume (optional)')
+    parser.add_argument('--wandb-project', default='emotion-recognition-baseline', type=str, help='Wandb project to log to (required)')
+    parser.add_argument('--wandb-entity', default='team-azam', type=str, help='Wandb entity (optional)')
+    parser.add_argument('--wandb-tags', default='baseline', type=str, nargs='+', help='List of tags for the wandb run (optional)')
+
+    
+    
     parser.add_argument('--result_path', default='results', type=str, help='Result directory path')
     parser.add_argument('--store_name', default='model', type=str, help='Name to store checkpoints')
     parser.add_argument('--dataset', default='RAVDESS', type=str, help='Used dataset. Currently supporting Ravdess')
