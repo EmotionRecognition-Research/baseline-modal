@@ -1,0 +1,1 @@
+{"_wandb": {"runtime": 4427}, "epoch": 1, "loss": 1.4137991666793823, "prec1": 47.50322341918945, "prec5": 90.48002624511719, "lr": 0.04, "_timestamp": 1710401301.807702, "validation_epoch": 1, "validation_loss": 1.324586033821106, "validation_prec1": 58.33333206176758, "validation_prec5": 99.47916412353516, "_runtime": 4333.761860132217, "_step": 1}

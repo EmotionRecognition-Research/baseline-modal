@@ -2,7 +2,6 @@ from wandb_wrapper import WandBIntegration
 from opts import parse_opts
 
 def initialize_wandb():
-    print("===============================initialization")
     opt = parse_opts()
     Agent = WandBIntegration(
         project_name='baseline-modal',

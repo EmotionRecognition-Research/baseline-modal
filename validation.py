@@ -5,6 +5,10 @@ import torch
 from torch.autograd import Variable
 import time
 from utils import AverageMeter, calculate_accuracy
+from sklearn.metrics import confusion_matrix, precision_score, recall_score
+import matplotlib.pyplot as plt
+import numpy as np
+from sklearn.metrics import ConfusionMatrixDisplay
 
 def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modality='both',dist=None ):
     #for evaluation with single modality, specify which modality to keep and which distortion to apply for the other modaltiy:
@@ -20,9 +24,13 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
     top5 = AverageMeter()
 
     end_time = time.time()
+    
+    all_targets = []
+    all_outputs = []
+    
     for i, (inputs_audio, inputs_visual, targets) in enumerate(data_loader):
         data_time.update(time.time() - end_time)
-
+        
         if modality == 'audio':
             print('Skipping video modality')
             if dist == 'noise':
@@ -49,15 +57,16 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
         inputs_visual = inputs_visual.permute(0,2,1,3,4)
         inputs_visual = inputs_visual.reshape(inputs_visual.shape[0]*inputs_visual.shape[1], inputs_visual.shape[2], inputs_visual.shape[3], inputs_visual.shape[4])
         
-
-
+        
         
         targets = targets.to(opt.device)
+        all_targets.extend(targets)
         with torch.no_grad():
             inputs_visual = Variable(inputs_visual)
             inputs_audio = Variable(inputs_audio)
             targets = Variable(targets)
         outputs = model(inputs_audio, inputs_visual)
+        all_outputs.extend(outputs)
         loss = criterion(outputs, targets)
         prec1, prec5 = calculate_accuracy(outputs.data, targets.data, topk=(1,5))
         top1.update(prec1, inputs_audio.size(0))
@@ -91,10 +100,37 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
         }
     logger.log(log)
 
-    return losses.avg.item(), top1.avg.item(), log
+    return losses.avg.item(), top1.avg.item(), log, all_targets, all_outputs
 
-def val_epoch(epoch, data_loader, model, criterion, opt, logger, modality='both', dist=None):
+def val_epoch(epoch, data_loader, model, criterion, opt, logger, modality='both', dist=None, is_testing=False):
     print('validation at epoch {}'.format(epoch))
-    if opt.model == 'multimodalcnn':
-        return val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger, modality, dist=dist)
+    targets = []
+    outputs = []
     
+    if opt.model == 'multimodalcnn':
+        loss, prec1, log, targets, outputs = val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger, modality, dist=dist)
+
+    if is_testing:
+        # Convert targets and outputs to numpy arrays
+        targets_np = targets.cpu().numpy()
+        outputs_np = outputs.cpu().numpy()
+
+        # Calculate confusion matrix
+        conf_mat = confusion_matrix(targets_np, outputs_np)
+
+        # Calculate precision and recall
+        precision = precision_score(targets_np, outputs_np, average='macro')
+        recall = recall_score(targets_np, outputs_np, average='macro')
+
+        # Add these metrics to the log
+        log['confusion_matrix'] = conf_mat
+        log['precision'] = precision
+        log['recall'] = recall
+        
+        # Plot confusion matrix
+        fig, ax = plt.subplots(figsize=(10, 10))
+        disp = ConfusionMatrixDisplay(confusion_matrix=conf_mat)
+        disp.plot(cmap=plt.cm.Blues, ax=ax)
+        plt.savefig('confusion_matrix.png')
+
+    return loss, prec1, log

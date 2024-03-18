@@ -1,0 +1,58 @@
+2024-03-14 05:43:48,727 INFO    StreamThr :13903 [internal.py:wandb_internal():86] W&B internal server running at pid: 13903, started at: 2024-03-14 05:43:48.726457
+2024-03-14 05:43:48,732 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status
+2024-03-14 05:43:48,739 INFO    WriterThread:13903 [datastore.py:open_for_write():87] open: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/run-4fO5IOgPSyJIH4cZ69Sa.wandb
+2024-03-14 05:43:48,740 DEBUG   SenderThread:13903 [sender.py:send():378] send: header
+2024-03-14 05:43:48,753 DEBUG   SenderThread:13903 [sender.py:send():378] send: run
+2024-03-14 05:43:49,245 INFO    SenderThread:13903 [dir_watcher.py:__init__():211] watching files in: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files
+2024-03-14 05:43:49,245 INFO    SenderThread:13903 [sender.py:_start_run_threads():1099] run started: 4fO5IOgPSyJIH4cZ69Sa with start time 1710395028.726748
+2024-03-14 05:43:49,264 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: check_version
+2024-03-14 05:43:49,264 DEBUG   SenderThread:13903 [sender.py:send_request():405] send_request: check_version
+2024-03-14 05:43:49,456 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: run_start
+2024-03-14 05:43:49,457 DEBUG   HandlerThread:13903 [system_info.py:__init__():26] System info init
+2024-03-14 05:43:49,458 DEBUG   HandlerThread:13903 [system_info.py:__init__():41] System info init done
+2024-03-14 05:43:49,458 INFO    HandlerThread:13903 [system_monitor.py:start():194] Starting system monitor
+2024-03-14 05:43:49,458 INFO    SystemMonitor:13903 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-03-14 05:43:49,459 INFO    HandlerThread:13903 [system_monitor.py:probe():214] Collecting system info
+2024-03-14 05:43:49,460 INFO    SystemMonitor:13903 [interfaces.py:start():190] Started cpu monitoring
+2024-03-14 05:43:49,462 INFO    SystemMonitor:13903 [interfaces.py:start():190] Started disk monitoring
+2024-03-14 05:43:49,464 INFO    SystemMonitor:13903 [interfaces.py:start():190] Started memory monitoring
+2024-03-14 05:43:49,465 INFO    SystemMonitor:13903 [interfaces.py:start():190] Started network monitoring
+2024-03-14 05:43:49,470 DEBUG   HandlerThread:13903 [system_info.py:probe():150] Probing system
+2024-03-14 05:43:49,478 DEBUG   HandlerThread:13903 [system_info.py:_probe_git():135] Probing git
+2024-03-14 05:43:49,492 DEBUG   HandlerThread:13903 [system_info.py:_probe_git():143] Probing git done
+2024-03-14 05:43:49,493 DEBUG   HandlerThread:13903 [system_info.py:probe():198] Probing system done
+2024-03-14 05:43:49,493 DEBUG   HandlerThread:13903 [system_monitor.py:probe():223] {'os': 'Linux-4.19.0-26-cloud-amd64-x86_64-with-glibc2.17', 'python': '3.8.18', 'heartbeatAt': '2024-03-14T05:43:49.470251', 'startedAt': '2024-03-14T05:43:48.714818', 'docker': None, 'cuda': None, 'args': (), 'state': 'running', 'program': 'main.py', 'codePathLocal': 'main.py', 'codePath': 'main.py', 'git': {'remote': 'https://github.com/EmotionRecognition-Research/baseline-modal.git', 'commit': '2f7997e95de64985c28315bce6b6b9169f599a32'}, 'email': None, 'root': '/home/dmura/baseline-modal', 'host': 'idl-team13', 'username': 'dmura', 'executable': '/home/dmura/anaconda3/envs/idl-baseline-env/bin/python', 'cpu_count': 2, 'cpu_count_logical': 4, 'cpu_freq': {'current': 2199.998, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 2199.998, 'min': 0.0, 'max': 0.0}, {'current': 2199.998, 'min': 0.0, 'max': 0.0}, {'current': 2199.998, 'min': 0.0, 'max': 0.0}, {'current': 2199.998, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 98.18611526489258, 'used': 39.18425369262695}}, 'memory': {'total': 25.50957489013672}}
+2024-03-14 05:43:49,493 INFO    HandlerThread:13903 [system_monitor.py:probe():224] Finished collecting system info
+2024-03-14 05:43:49,493 INFO    HandlerThread:13903 [system_monitor.py:probe():227] Publishing system info
+2024-03-14 05:43:49,493 DEBUG   HandlerThread:13903 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-03-14 05:43:50,248 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_created():271] file/dir created: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/conda-environment.yaml
+2024-03-14 05:43:53,090 DEBUG   HandlerThread:13903 [system_info.py:_save_conda():219] Saving conda packages done
+2024-03-14 05:43:53,092 INFO    HandlerThread:13903 [system_monitor.py:probe():229] Finished publishing system info
+2024-03-14 05:43:53,095 DEBUG   SenderThread:13903 [sender.py:send():378] send: files
+2024-03-14 05:43:53,095 INFO    SenderThread:13903 [sender.py:_save_file():1365] saving file wandb-metadata.json with policy now
+2024-03-14 05:43:53,218 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: python_packages
+2024-03-14 05:43:53,219 DEBUG   SenderThread:13903 [sender.py:send_request():405] send_request: python_packages
+2024-03-14 05:43:53,219 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-14 05:43:53,219 DEBUG   SenderThread:13903 [sender.py:send_request():405] send_request: stop_status
+2024-03-14 05:43:53,223 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-14 05:43:53,247 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/conda-environment.yaml
+2024-03-14 05:43:53,247 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_created():271] file/dir created: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/requirements.txt
+2024-03-14 05:43:53,248 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_created():271] file/dir created: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/wandb-metadata.json
+2024-03-14 05:43:53,602 DEBUG   SenderThread:13903 [sender.py:send():378] send: telemetry
+2024-03-14 05:43:53,842 INFO    wandb-upload_0:13903 [upload_job.py:push():131] Uploaded file /tmp/tmpmfd51kjzwandb/uo5fy07m-wandb-metadata.json
+2024-03-14 05:43:54,247 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_created():271] file/dir created: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/output.log
+2024-03-14 05:43:54,665 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:43:56,248 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/output.log
+2024-03-14 05:43:59,665 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:44:04,666 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:44:08,219 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-14 05:44:08,219 DEBUG   SenderThread:13903 [sender.py:send_request():405] send_request: stop_status
+2024-03-14 05:44:08,223 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-14 05:44:10,469 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:44:12,254 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/output.log
+2024-03-14 05:44:16,087 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:44:21,099 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: status_report
+2024-03-14 05:44:22,259 INFO    Thread-12 :13903 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/dmura/baseline-modal/wandb/run-20240314_054348-4fO5IOgPSyJIH4cZ69Sa/files/config.yaml
+2024-03-14 05:44:23,762 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: stop_status
+2024-03-14 05:44:23,765 DEBUG   HandlerThread:13903 [handler.py:handle_request():146] handle_request: internal_messages
+2024-03-14 05:44:23,767 DEBUG   SenderThread:13903 [sender.py:send_request():405] send_request: stop_status

@@ -329,3 +329,4 @@ class WandBIntegration:
       self.get_and_save_wandb_api_key(api_key)
       os.environ['WANDB_API_KEY'] = api_key
       return api_key
+  

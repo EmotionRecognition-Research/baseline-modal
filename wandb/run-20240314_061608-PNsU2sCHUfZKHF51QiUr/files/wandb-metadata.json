@@ -1,0 +1,60 @@
+{
+    "os": "Linux-4.19.0-26-cloud-amd64-x86_64-with-glibc2.17",
+    "python": "3.8.18",
+    "heartbeatAt": "2024-03-14T06:16:08.797221",
+    "startedAt": "2024-03-14T06:16:08.038883",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "main.py",
+    "codePathLocal": "main.py",
+    "codePath": "main.py",
+    "git": {
+        "remote": "https://github.com/EmotionRecognition-Research/baseline-modal.git",
+        "commit": "2f7997e95de64985c28315bce6b6b9169f599a32"
+    },
+    "email": null,
+    "root": "/home/dmura/baseline-modal",
+    "host": "idl-team13",
+    "username": "dmura",
+    "executable": "/home/dmura/anaconda3/envs/idl-baseline-env/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2199.998,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2199.998,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 98.18611526489258,
+            "used": 39.18452453613281
+        }
+    },
+    "memory": {
+        "total": 25.50959014892578
+    }
+}

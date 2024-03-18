@@ -6,3 +6,11 @@
 *baseline-venv
 
 ./EfficientFace_Trained_on_AffectNet7.pth.tar
+
+./results
+*results
+
+./wandb
+*wandb
+
+custom_dataset_preprocessing/CustomTestDataset

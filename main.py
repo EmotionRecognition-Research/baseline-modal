@@ -21,6 +21,7 @@ from validation import val_epoch
 import time
 
 from wandb_integration import initialize_wandb
+import gc
 
 
 if __name__ == '__main__':
@@ -53,6 +54,8 @@ if __name__ == '__main__':
 
         criterion = nn.CrossEntropyLoss()
         criterion = criterion.to(opt.device)
+        gc.collect() # These commands help you when you face CUDA OOM error
+        torch.cuda.empty_cache()
         
         if not opt.no_train:
             
@@ -127,7 +130,7 @@ if __name__ == '__main__':
                             train_logger, train_batch_logger)
                 wandb_agent.log_metrics(
                     metrics=log,
-                    step=log.epoch
+                    step=i
                 )
                 state = {
                     'epoch': i,
@@ -149,7 +152,7 @@ if __name__ == '__main__':
                         'validation_prec1': log['prec1'],
                         'validation_prec5': log['prec5']
                     },
-                    step=log['epoch']
+                    step=i
                 )
                 is_best = prec1 > best_prec1
                 best_prec1 = max(prec1, best_prec1)
@@ -184,11 +187,18 @@ if __name__ == '__main__':
                 num_workers=opt.n_threads,
                 pin_memory=True)
             
-            test_loss, test_prec1 = val_epoch(10000, test_loader, model, criterion, opt,
-                                            test_logger)
+            test_loss, test_prec1, log = val_epoch(10000, test_loader, model, criterion, opt,
+                                            test_logger, is_testing=True)
+            
+            precision = log['precision'] if log['precision'] else np.NaN
+            recall = log['recall'] if log['recall'] else np.NaN
             
             with open(os.path.join(opt.result_path, 'test_set_bestval'+str(fold)+'.txt'), 'a') as f:
-                    f.write('Prec1: ' + str(test_prec1) + '; Loss: ' + str(test_loss))
+                f.write('Prec1: ' + str(test_prec1) + '\n')
+                f.write('Loss: ' + str(test_loss) + '\n')
+                f.write('Precision: ' + str(precision) + '\n')
+                f.write('Recall: ' + str(recall) + '\n')
+                
             test_accuracies.append(test_prec1) 
                 
             

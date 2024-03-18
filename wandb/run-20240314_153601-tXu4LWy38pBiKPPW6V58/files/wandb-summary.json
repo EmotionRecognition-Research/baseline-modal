@@ -1,0 +1,1 @@
+{"epoch": 98, "loss": 0.20777113735675812, "prec1": 95.3769302368164, "prec5": 100.0, "lr": 4.000000000000001e-06, "_timestamp": 1710778411.7040842, "validation_epoch": 98, "validation_loss": 0.853671133518219, "validation_prec1": 70.05208587646484, "validation_prec5": 98.95833587646484, "_runtime": 347850.6661622524, "_step": 98}
