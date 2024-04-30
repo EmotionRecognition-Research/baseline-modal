@@ -10,7 +10,9 @@ import numpy as np
 ##both sides
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-root = './CustomTestDataset/Audio'
+# root = './Caucasian_CustomTestDataset/Audio'
+# root = './Asian_CustomTestDataset/Audio'
+root = './AfricanAmerican_CustomTestDataset/Audio'
 target_time = 3.6 #sec
 
 for audiofile in os.listdir(os.path.join(script_dir, root)):

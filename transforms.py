@@ -7,6 +7,10 @@ import numbers
 import numpy as np
 import torch
 from PIL import Image
+
+import warnings
+warnings.filterwarnings('ignore', category=UserWarning, message='TypedStorage is deprecated')
+
 try:
     import accimage
 except ImportError:

@@ -3,8 +3,12 @@
 This code is based on timm library https://github.com/rwightman/pytorch-image-models
 """
 
-from torch import nn
+from torch import nn, Tensor
 import torch
+import torch.nn as nn
+import torch.nn.functional as F
+import math
+
 
 class Mlp(nn.Module):
     """ MLP as used in Vision Transformer, MLP-Mixer and related networks
@@ -67,37 +71,46 @@ class DropPath(nn.Module):
     def forward(self, x):
         return drop_path(x, self.drop_prob, self.training)
 
-
 class Attention(nn.Module):
     def __init__(self, in_dim_k, in_dim_q, out_dim, num_heads=8, qkv_bias=False, qk_scale=None, attn_drop=0., proj_drop=0.):
-        super().__init__()
+        super(Attention, self).__init__()
         self.num_heads = num_heads
         head_dim = out_dim // num_heads
         self.scale = qk_scale or head_dim ** -0.5
 
+        # Initialize linear transformations for Q, K, and V
         self.q = nn.Linear(in_dim_q, out_dim, bias=qkv_bias)
-        self.kv = nn.Linear(in_dim_k, out_dim * 2, bias=qkv_bias)
+        self.kv = nn.Linear(in_dim_k, out_dim * 2, bias=qkv_bias)  # Outputs both K and V
+
+        # Dropout for attention and output projection
         self.attn_drop = nn.Dropout(attn_drop)
         self.proj = nn.Linear(out_dim, out_dim)
         self.proj_drop = nn.Dropout(proj_drop)
+
+        # To store the attention matrix (for visualization or further analysis)
         self.qkmatrix = None
 
     def forward(self, x, x_q):
-        B, Nk, Ck = x.shape
-        B, Nq, Cq = x_q.shape
-        q = self.q(x_q).reshape(B, Nq, 1, self.num_heads, -1).permute(2, 0, 3, 1, 4)
-        kv = self.kv(x).reshape(B, Nk, 2, self.num_heads, -1).permute(2, 0, 3, 1, 4)
-        k, v = kv[0], kv[1]   # make torchscript happy (cannot use tensor as tuple)
-        q = q.squeeze(0)
+        # x: key and value input [batch_size, num_keys, channels]
+        # x_q: query input [batch_size, num_queries, channels]
+        B, Nk, _ = x.shape
+        B, Nq, _ = x_q.shape
 
-        attn = (q @ k.transpose(-2, -1)) * self.scale
-       
-        attn = attn.softmax(dim=-1)
-        
-        self.qkmatrix = attn
+        # Compute Q, K, V matrices
+        q = self.q(x_q).reshape(B, Nq, self.num_heads, -1).permute(0, 2, 1, 3)
+        kv = self.kv(x).reshape(B, Nk, 2, self.num_heads, -1 // self.num_heads).permute(2, 0, 3, 1, 4)
+        k, v = kv[0], kv[1]
+
+        # Scaled dot-product attention
+        attn = torch.matmul(q, k.transpose(-2, -1)) * self.scale
+        attn = F.softmax(attn, dim=-1)
+        self.qkmatrix = attn  # Save attention matrix
         attn = self.attn_drop(attn)
 
-        x = (attn @ v).transpose(1, 2).reshape(B, Nq, -1)
+        # Compute weighted sum of values
+        x = torch.matmul(attn, v).transpose(1, 2).reshape(B, Nq, -1)
+
+        # Output projection
         x = self.proj(x)
         x = self.proj_drop(x)
 

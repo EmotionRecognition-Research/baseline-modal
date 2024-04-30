@@ -1,6 +1,8 @@
 '''
 This code is based on https://github.com/okankop/Efficient-3DCNNs
 '''
+import os
+import pandas as pd
 import torch
 from torch.autograd import Variable
 import time
@@ -9,12 +11,33 @@ from sklearn.metrics import confusion_matrix, precision_score, recall_score
 import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.metrics import ConfusionMatrixDisplay
+import gc
+
+file_path = "results.csv"
+
+# Define the expected column names
+expected_columns = ['target', 'prediction', 'accent', 'modality']
+
+global df
+
+try:
+    # Try reading the CSV file with the expected column names
+    df = pd.read_csv(file_path, usecols=expected_columns)
+except ValueError:
+    # If specified columns are not found, read the CSV file without specifying columns
+    df = pd.read_csv(file_path)
+    
+    # Rename the existing headers to match the expected column names
+    df.columns = expected_columns
+
 
 def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modality='both',dist=None ):
     #for evaluation with single modality, specify which modality to keep and which distortion to apply for the other modaltiy:
     #'noise', 'addnoise' or 'zeros'. for paper procedure, with 'softhard' mask use 'zeros' for evaluation, with 'noise' use 'noise'
     print('validation at epoch {}'.format(epoch))
-    assert modality in ['both', 'audio', 'video']    
+    assert modality in ['both', 'audio', 'video']
+    gc.collect()
+    torch.cuda.empty_cache()    
     model.eval()
 
     batch_time = AverageMeter()
@@ -29,6 +52,7 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
     all_outputs = []
     
     for i, (inputs_audio, inputs_visual, targets) in enumerate(data_loader):
+        global df
         data_time.update(time.time() - end_time)
         
         if modality == 'audio':
@@ -60,13 +84,13 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
         
         
         targets = targets.to(opt.device)
-        all_targets.extend(targets)
+        # all_targets.extend(targets)
         with torch.no_grad():
             inputs_visual = Variable(inputs_visual)
             inputs_audio = Variable(inputs_audio)
             targets = Variable(targets)
         outputs = model(inputs_audio, inputs_visual)
-        all_outputs.extend(outputs)
+        # all_outputs.extend(outputs)
         loss = criterion(outputs, targets)
         prec1, prec5 = calculate_accuracy(outputs.data, targets.data, topk=(1,5))
         top1.update(prec1, inputs_audio.size(0))
@@ -76,6 +100,19 @@ def val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger,modal
 
         batch_time.update(time.time() - end_time)
         end_time = time.time()
+        
+        # Flatten the tensors
+        targets_flat = targets.detach().cpu().numpy().flatten()
+        outputs_flat = outputs.argmax(dim=1).detach().cpu().numpy()
+        # print(targets_flat, outputs_flat)
+
+        # Create DataFrame
+        new_data = pd.DataFrame({'target': targets_flat, 'prediction': outputs_flat, 'accent': [1] * len(targets_flat), 'modality': [1] * len(targets_flat)})
+        
+        # Append the values to the DataFrame
+        df = pd.concat([df, new_data], ignore_index=True)
+        del targets
+        del outputs
 
         print('Epoch: [{0}][{1}/{2}]\t'
               'Time {batch_time.val:.5f} ({batch_time.avg:.5f})\t'
@@ -110,6 +147,8 @@ def val_epoch(epoch, data_loader, model, criterion, opt, logger, modality='both'
     if opt.model == 'multimodalcnn':
         loss, prec1, log, targets, outputs = val_epoch_multimodal(epoch, data_loader, model, criterion, opt, logger, modality, dist=dist)
 
+    df.to_csv(file_path)
+    
     if is_testing:
         # Convert targets and outputs to numpy arrays
         targets_np = targets.cpu().numpy()

@@ -10,8 +10,33 @@ from models.efficientface import LocalFeatureExtractor, InvertedResidual
 from models.transformer_timm import AttentionBlock, Attention
 
 def conv1d_block(in_channels, out_channels, kernel_size=3, stride=1, padding='same'):
-    return nn.Sequential(nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size,stride=stride, padding=padding),nn.BatchNorm1d(out_channels),
-                                   nn.ReLU(inplace=True))
+    return nn.Sequential(nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size,stride=stride, padding=padding),
+                         nn.BatchNorm1d(out_channels),
+                         nn.Sigmoid())
+
+
+class ResidualBlock(nn.Module):
+    def __init__(self, in_channels, out_channels, kernel_size=3, stride=1, padding=1):
+        super(ResidualBlock, self).__init__()
+        self.conv1 = nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size, stride=stride, padding=padding)
+        self.bn1 = nn.BatchNorm1d(out_channels)
+        self.conv2 = nn.Conv1d(out_channels, out_channels, kernel_size=kernel_size, stride=stride, padding=padding)
+        self.bn2 = nn.BatchNorm1d(out_channels)
+        self.relu = nn.ReLU(inplace=True)
+        self.shortcut = nn.Conv1d(in_channels, out_channels, kernel_size=1, stride=stride, padding=0)
+
+    def forward(self, x):
+        residual = x
+        out = self.conv1(x)
+        out = self.bn1(out)
+        out = self.relu(out)
+        out = self.conv2(out)
+        out = self.bn2(out)
+        if residual.shape != out.shape:
+            residual = self.shortcut(residual)
+        out += residual
+        out = self.relu(out)
+        return out
 
 class EfficientFaceTemporal(nn.Module):
 
@@ -28,12 +53,13 @@ class EfficientFaceTemporal(nn.Module):
         output_channels = self._stage_out_channels[0]
         self.conv1 = nn.Sequential(nn.Conv2d(input_channels, output_channels, 3, 2, 1, bias=False),
                                    nn.BatchNorm2d(output_channels),
-                                   nn.ReLU(inplace=True),)
+                                   nn.Sigmoid())
         input_channels = output_channels
 
         self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
 
         stage_names = ['stage{}'.format(i) for i in [2, 3, 4]]
+
         for name, repeats, output_channels in zip(stage_names, stages_repeats, self._stage_out_channels[1:]):
             seq = [InvertedResidual(input_channels, output_channels, 2)]
             for i in range(repeats - 1):
@@ -48,16 +74,24 @@ class EfficientFaceTemporal(nn.Module):
 
         self.conv5 = nn.Sequential(nn.Conv2d(input_channels, output_channels, 1, 1, 0, bias=False),
                                    nn.BatchNorm2d(output_channels),
-                                   nn.ReLU(inplace=True),)
+                                   nn.Sigmoid())
+
         self.conv1d_0 = conv1d_block(output_channels, 64)
-        self.conv1d_1 = conv1d_block(64, 64)
-        self.conv1d_2 = conv1d_block(64, 128)
-        self.conv1d_3 = conv1d_block(128, 128)
+
+        self.res_block_1 = ResidualBlock(64, 64)
+        self.res_block_2 = ResidualBlock(64, 64)
+        self.res_block_3 = ResidualBlock(64, 128)
+        self.res_block_4 = ResidualBlock(128, 128)
+
+        self.conv1d_5 = conv1d_block(128, 128)
 
         self.classifier_1 = nn.Sequential(
                 nn.Linear(128, num_classes),
             )
         self.im_per_sample = im_per_sample
+
+        self.lstm1 = nn.LSTM(15, 64, 1, batch_first=True, bidirectional=True)
+        self.lstm2 = nn.LSTM(128, 128, 1, batch_first=True, bidirectional=True)
         
     def forward_features(self, x):
         x = self.conv1(x)
@@ -76,13 +110,17 @@ class EfficientFaceTemporal(nn.Module):
         x = x.view(n_samples, self.im_per_sample, x.shape[1])
         x = x.permute(0,2,1)
         x = self.conv1d_0(x)
-        x = self.conv1d_1(x)
+        x = self.res_block_1(x)
+        x = self.res_block_2(x)
+        #x, _ = self.lstm1(x)
         return x
         
         
     def forward_stage2(self, x):
-        x = self.conv1d_2(x)
-        x = self.conv1d_3(x)
+        x = self.res_block_3(x)
+        x = self.res_block_4(x)
+        x = self.conv1d_5(x)
+        #x, _ = self.lstm2(x)
         return x
     
     def forward_classifier(self, x):
@@ -96,8 +134,7 @@ class EfficientFaceTemporal(nn.Module):
         x = self.forward_stage2(x)
         x = self.forward_classifier(x)
         return x
-        
-      
+
 
 def init_feature_extractor(model, path):
     if path == 'None' or path is None:
@@ -115,8 +152,11 @@ def get_model(num_classes, task, seq_length):
 
 
 def conv1d_block_audio(in_channels, out_channels, kernel_size=3, stride=1, padding='same'):
-    return nn.Sequential(nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size,stride=stride, padding='valid'),nn.BatchNorm1d(out_channels),
-                                   nn.ReLU(inplace=True), nn.MaxPool1d(2,1))
+    return nn.Sequential(nn.Conv1d(in_channels, out_channels, kernel_size=kernel_size,stride=stride, padding='valid'),
+                         nn.BatchNorm1d(out_channels),
+                         nn.GELU(),
+                         nn.MaxPool1d(2,1))
+
 
 class AudioCNNPool(nn.Module):
 
@@ -125,41 +165,41 @@ class AudioCNNPool(nn.Module):
 
         input_channels = 10
         self.conv1d_0 = conv1d_block_audio(input_channels, 64)
-        self.conv1d_1 = conv1d_block_audio(64, 128)
-        self.conv1d_2 = conv1d_block_audio(128, 256)
-        self.conv1d_3 = conv1d_block_audio(256, 128)
-        
+        self.res_block_1 = ResidualBlock(64, 128)
+        self.res_block_2 = ResidualBlock(128, 128)
+        self.res_block_3 = ResidualBlock(128, 256)
+        self.res_block_4 = ResidualBlock(256, 256)
+        self.conv1d_5 = conv1d_block_audio(256, 128)
+
         self.classifier_1 = nn.Sequential(
-                nn.Linear(128, num_classes),
-            )
-            
+            nn.Linear(128, num_classes),
+        )
+
     def forward(self, x):
         x = self.forward_stage1(x)
         x = self.forward_stage2(x)
         x = self.forward_classifier(x)
         return x
 
-
-    def forward_stage1(self,x):            
+    def forward_stage1(self, x):
         x = self.conv1d_0(x)
-        x = self.conv1d_1(x)
+        x = self.res_block_1(x)
+        x = self.res_block_2(x)
         return x
-    
-    def forward_stage2(self,x):
-        x = self.conv1d_2(x)
-        x = self.conv1d_3(x)   
+
+    def forward_stage2(self, x):
+        x = self.res_block_3(x)
+        x = self.res_block_4(x)
+        x = self.conv1d_5(x)
         return x
-    
-    def forward_classifier(self, x):   
-        x = x.mean([-1]) #pooling accross temporal dimension
+
+    def forward_classifier(self, x):
+        x = x.mean([-1])  # pooling accross temporal dimension
         x1 = self.classifier_1(x)
         return x1
 
-    
-
-
 class MultiModalCNN(nn.Module):
-    def __init__(self, num_classes=8, fusion='ia', seq_length=15, pretr_ef='None', num_heads=1):
+    def __init__(self, num_classes=8, fusion='ia', seq_length=15, pretr_ef='None', num_heads=8):
         super(MultiModalCNN, self).__init__()
         assert fusion in ['ia', 'it', 'lt'], print('Unsupported fusion method: {}'.format(fusion))
 
@@ -188,12 +228,9 @@ class MultiModalCNN(nn.Module):
             self.av1 = Attention(in_dim_k=input_dim_video, in_dim_q=input_dim_audio, out_dim=input_dim_audio, num_heads=num_heads)
             self.va1 = Attention(in_dim_k=input_dim_audio, in_dim_q=input_dim_video, out_dim=input_dim_video, num_heads=num_heads)
 
-            
         self.classifier_1 = nn.Sequential(
                     nn.Linear(e_dim*2, num_classes),
                 )
-        
-            
 
     def forward(self, x_audio, x_visual):
 
@@ -206,8 +243,8 @@ class MultiModalCNN(nn.Module):
         elif self.fusion == 'it':
             return self.forward_feature_3(x_audio, x_visual)
 
- 
-        
+
+
     def forward_feature_3(self, x_audio, x_visual):
         x_audio = self.audio_model.forward_stage1(x_audio)
         x_visual = self.visual_model.forward_features(x_visual)
@@ -289,20 +326,4 @@ class MultiModalCNN(nn.Module):
         x = torch.cat((audio_pooled, video_pooled), dim=-1)  
         x1 = self.classifier_1(x)
         return x1
- 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+

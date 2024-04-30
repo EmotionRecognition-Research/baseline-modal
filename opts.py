@@ -15,11 +15,12 @@ def generate_random_string(length=20):
 
 def parse_opts():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--annotation_path', default='ravdess_preprocessing/annotations.txt', type=str, help='Annotation file path')
+    parser.add_argument('--annotation_path', default='/home/ubuntu/baseline/CREMA-D_preprocessing/annotations.txt', type=str, help='Annotation file path')
     parser.add_argument('--result_path', default='results', type=str, help='Result directory path')
     parser.add_argument('--store_name', default='model', type=str, help='Name to store checkpoints')
     parser.add_argument('--dataset', default='RAVDESS', type=str, help='Used dataset. Currently supporting Ravdess')
     parser.add_argument('--n_classes', default=8, type=int, help='Number of classes')
+    parser.add_argument('--modality', default='both', type=str, help='')
     
     parser.add_argument('--wandb_api_key', default='67854161c8597710d75225dc126932a363af1945', type=str, help='wandb api key')    
     parser.add_argument('--wandb-run-id', default=generate_random_string(), type=str, help='Specific run id to resume a previous run (optional)')
@@ -39,15 +40,15 @@ def parse_opts():
     
     parser.add_argument('--learning_rate', default=0.04, type=float, help='Initial learning rate (divided by 10 while training by lr scheduler)')
     parser.add_argument('--momentum', default=0.9, type=float, help='Momentum')
-    parser.add_argument('--lr_steps', default=[40, 55, 65, 70, 200, 250], type=float, nargs="+", metavar='LRSteps', help='epochs to decay learning rate by 10')
+    parser.add_argument('--lr_steps', default=[20, 40, 55, 65, 70, 200, 250], type=float, nargs="+", metavar='LRSteps', help='epochs to decay learning rate by 10')
     parser.add_argument('--dampening', default=0.9, type=float, help='dampening of SGD')
     parser.add_argument('--weight_decay', default=1e-3, type=float, help='Weight Decay')
     parser.add_argument('--lr_patience', default=10, type=int, help='Patience of LR scheduler. See documentation of ReduceLROnPlateau.')
-    parser.add_argument('--batch_size', default=2, type=int, help='Batch Size')
+    parser.add_argument('--batch_size', default=12, type=int, help='Batch Size')
     parser.add_argument('--n_epochs', default=100, type=int, help='Number of total epochs to run')
     
     parser.add_argument('--begin_epoch', default=1, type=int, help='Training begins at this epoch. Previous trained model indicated by resume_path is loaded.')
-    parser.add_argument('--resume_path', default='', type=str, help='Save data (.pth) of previous training')
+    parser.add_argument('--resume_path', default='/home/ubuntu/baseline/results/RAVDESS_multimodalcnn_15_checkpoint0.pth', type=str, help='Save data (.pth) of previous training')
     parser.add_argument('--pretrain_path', default='EfficientFace_Trained_on_AffectNet7.pth.tar', type=str, help='Pretrained model (.pth), efficientface')
     parser.add_argument('--no_train', action='store_true', help='If true, training is not performed.')
     parser.set_defaults(no_train=False)
@@ -57,7 +58,7 @@ def parse_opts():
     parser.set_defaults(test=True)
     parser.add_argument('--test_subset', default='test', type=str, help='Used subset in test (val | test)')
     
-    parser.add_argument('--n_threads', default=16, type=int, help='Number of threads for multi-thread loading')
+    parser.add_argument('--n_threads', default=4, type=int, help='Number of threads for multi-thread loading')
     parser.add_argument('--video_norm_value', default=255, type=int, help='If 1, range of inputs is [0-255]. If 255, range of inputs is [0-1].')
  
     parser.add_argument('--manual_seed', default=1, type=int, help='Manually set random seed')

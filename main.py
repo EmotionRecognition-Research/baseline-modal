@@ -25,6 +25,9 @@ import gc
 
 
 if __name__ == '__main__':
+    torch.cuda.empty_cache()
+    gc.collect()
+
     opt = parse_opts()
     n_folds = 1
     test_accuracies = []
@@ -139,7 +142,8 @@ if __name__ == '__main__':
                     'optimizer': optimizer.state_dict(),
                     'best_prec1': best_prec1
                 }
-                save_checkpoint(state, False, opt, fold)
+
+                save_checkpoint(state, False, opt, fold) 
             
             if not opt.no_val:
                 
@@ -178,6 +182,7 @@ if __name__ == '__main__':
         
             #load best model
             best_state = torch.load('%s/%s_best' % (opt.result_path, opt.store_name)+str(fold)+'.pth')
+            best_state = torch.load("./results/02_multimodalcnn_15_best0.pth")
             model.load_state_dict(best_state['state_dict'])
         
             test_loader = torch.utils.data.DataLoader(
@@ -188,7 +193,7 @@ if __name__ == '__main__':
                 pin_memory=True)
             
             test_loss, test_prec1, log = val_epoch(10000, test_loader, model, criterion, opt,
-                                            test_logger, is_testing=True)
+                                            test_logger, is_testing=True, modality=opt.modality)
             
             precision = log['precision'] if log['precision'] else np.NaN
             recall = log['recall'] if log['recall'] else np.NaN

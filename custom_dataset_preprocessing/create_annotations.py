@@ -2,7 +2,7 @@
 
 import os
 script_dir = os.path.dirname(os.path.abspath(__file__))
-root = 'CustomTestDataset/Videos'
+root = 'AfricanAmerican_CustomTestDataset/Videos'
 
 n_folds=1
 folds = [[[0,1,2,3],[4,5,6,7],[8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23]]]
@@ -25,6 +25,6 @@ for video in os.listdir(os.path.join(script_dir, root)):
     audio = '03' + video.split('_face')[0][2:] + '_croppad.wav'
     
     with open(annotation_file, 'a') as f:
-        f.write(os.path.join(script_dir, root, video) + ';' + os.path.join(script_dir, "CustomTestDataset", "Audio", audio) + ';'+ label + ';testing' + '\n')
+        f.write(os.path.join(script_dir, root, video) + ';' + os.path.join(script_dir, "AfricanAmerican_CustomTestDataset", "Audio", audio) + ';'+ label + ';testing' + '\n')
 		
 

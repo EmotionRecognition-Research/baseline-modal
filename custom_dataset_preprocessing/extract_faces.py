@@ -12,7 +12,7 @@ device = torch.device('cuda') if torch.cuda.is_available() else 'cpu'
 
 mtcnn = MTCNN(image_size=(720, 1280), device=device)
 
-#mtcnn.to(device)
+mtcnn.to(device)
 save_frames = 15
 input_fps = 30
 
@@ -20,7 +20,9 @@ save_length = 3.6 #seconds
 save_avi = True
 
 failed_videos = []
-root = './CustomTestDataset/Videos'
+# root = './AfricanAmerican_CustomTestDataset/Videos'
+# root = './Asian_CustomTestDataset/Videos'
+root = './Caucasian_CustomTestDataset/Videos'
 ext = '.mp4'
 
 select_distributed = lambda m, n: [i*n//m + n//(2*m) for i in range(m)]

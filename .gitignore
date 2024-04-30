@@ -14,3 +14,7 @@
 *wandb
 
 custom_dataset_preprocessing/CustomTestDataset
+RAVDESS
+*.zip
+CREMA-D
+*CustomTestDataset
